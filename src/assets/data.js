@@ -49,3 +49,38 @@ export const fourcardImage = [
     name: "Fashion sandals",
   },
 ];
+
+export const product = [
+  {
+    src: "https://m.media-amazon.com/images/I/41ozwujDVTS._AC_SY200_.jpg",
+    price: "₹11,490.00",
+  },
+  {
+    src: "https://m.media-amazon.com/images/I/41bfYmgS8nL._AC_SY200_.jpg",
+    price: "₹34,990.00",
+  },
+  {
+    src: "https://m.media-amazon.com/images/I/41znff7SgPL._AC_SY200_.jpg",
+    price: "₹12,490.00",
+  },
+  {
+    src: "https://m.media-amazon.com/images/I/31mCcX7rQlS._AC_SY200_.jpg",
+    price: "₹1,390.00",
+  },
+  {
+    src: "https://m.media-amazon.com/images/I/51fU-iWByBL._AC_SY200_.jpg",
+    price: "₹51,600.00",
+  },
+  {
+    src: "https://m.media-amazon.com/images/I/41Yyg9tYFNL._AC_SY200_.jpg",
+    price: "₹340.00",
+  },
+  {
+    src: "https://m.media-amazon.com/images/I/51pwi9PzMoL._AC_SY200_.jpg",
+    price: "₹660.00",
+  },
+  {
+    src: "https://m.media-amazon.com/images/I/41ETJF7g1vS._AC_SY200_.jpg",
+    price: "₹12,290.00",
+  },
+];

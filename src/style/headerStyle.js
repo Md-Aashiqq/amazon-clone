@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Nav = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 48px;
   background: ${(props) => props.theme.header};
   padding: 9px;
@@ -48,6 +48,9 @@ export const SearchBar = styled.div`
     width: 5%;
     height: 38px;
     padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 0;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
@@ -63,6 +66,7 @@ export const Account = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  cursor: pointer;
   color: ${(props) => props.theme.white};
   span {
     display: block;

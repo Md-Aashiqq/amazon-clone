@@ -16,5 +16,6 @@ export const Tab = styled.div`
   font-weight: 400;
   margin-right: 14px;
   color: ${(props) => props.theme.white};
+  cursor: pointer;
 `;
 export const SubLogo = styled.div``;

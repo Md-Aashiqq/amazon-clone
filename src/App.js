@@ -1,8 +1,5 @@
 import "./App.css";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 
 import { normalize } from "styled-normalize";
@@ -10,8 +7,19 @@ import Header from "./components/Header/Header";
 import SubHeader from "./components/Header/SubHeader";
 import Banner from "./components/Banner/Banner";
 
+import Products from "./components/Products/Products";
+
+import { product } from "./assets/data";
+import LargeAds from "./components/Ads/LargeAds";
+import LoginSection from "./components/LoginSection/LoginSection";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Footer from "./components/Footer/Footer";
+import SubFooter from "./components/Footer/SubFooter";
+
 const GlabalStyles = createGlobalStyle`
-${normalize}
+/* ${normalize} */
 *{
   text-decoration:none;
   /* cursor:none;s */
@@ -30,7 +38,7 @@ body{
 `;
 
 const darkTheme = {
-  background: "#c4c4c4",
+  background: "#E5E1DE",
   color: "#0F1111",
   white: "#ffffff",
   red: "#ea291e",
@@ -54,9 +62,17 @@ function App() {
       <Header />
       <SubHeader />
       <Banner />
-      <div>
-        <h1>AShick</h1>
-      </div>
+
+      <Products name="Todays Deals" product={product} />
+      <Products
+        name="Everyday essentials that you might like
+"
+        product={product}
+      />
+      <LargeAds />
+      <LoginSection />
+      <Footer />
+      <SubFooter />
     </ThemeProvider>
   );
 }

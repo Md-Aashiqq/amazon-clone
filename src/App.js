@@ -2,21 +2,16 @@ import "./App.css";
 
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import { normalize } from "styled-normalize";
-import Header from "./components/Header/Header";
-import SubHeader from "./components/Header/SubHeader";
-import Banner from "./components/Banner/Banner";
-
-import Products from "./components/Products/Products";
-
-import { product } from "./assets/data";
-import LargeAds from "./components/Ads/LargeAds";
-import LoginSection from "./components/LoginSection/LoginSection";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Footer from "./components/Footer/Footer";
-import SubFooter from "./components/Footer/SubFooter";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 const GlabalStyles = createGlobalStyle`
 /* ${normalize} */
@@ -59,20 +54,23 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <GlabalStyles />
-      <Header />
-      <SubHeader />
-      <Banner />
+      <ToastContainer />
+      {/* <Home /> */}
+      {/*  */}
 
-      <Products name="Todays Deals" product={product} />
-      <Products
-        name="Everyday essentials that you might like
-"
-        product={product}
-      />
-      <LargeAds />
-      <LoginSection />
-      <Footer />
-      <SubFooter />
+      <Router>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/signup">
+            <Signup />
+          </Route>
+          <Route path="/signin">
+            <Login />
+          </Route>
+        </Switch>
+      </Router>
     </ThemeProvider>
   );
 }

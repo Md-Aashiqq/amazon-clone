@@ -4,6 +4,8 @@ import { Container, Flex } from "../../style/globalStyle";
 import SearchIcon from "@material-ui/icons/Search";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 
+import { useHistory } from "react-router-dom";
+
 import {
   Nav,
   Logo,
@@ -15,6 +17,8 @@ import {
 } from "../../style/headerStyle";
 
 const Header = () => {
+  const history = useHistory();
+
   return (
     <Nav>
       <Container fluid>
@@ -39,7 +43,7 @@ const Header = () => {
             </button>
           </SearchBar>
 
-          <Account>
+          <Account onClick={() => history.push("/signin")}>
             <span>Hello , Sign in</span>
             Accounts & List
           </Account>

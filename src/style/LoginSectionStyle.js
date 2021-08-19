@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Login = styled.div`
   width: 100%;
@@ -26,6 +26,15 @@ export const Button = styled.button`
   border: none;
   cursor: pointer;
   border-radius: 4px;
+
+  ${(props) =>
+    props.normal &&
+    css`
+      background: #dee1e6 !important;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      margin-top: 14px;
+      color: ${(props) => props.theme.secondary};
+    `}
 `;
 export const SubHeading = styled.div`
   font-size: 11px;
